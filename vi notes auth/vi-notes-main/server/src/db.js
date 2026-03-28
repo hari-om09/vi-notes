@@ -1,5 +1,9 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import dns from 'dns';
+
+// Force Node.js to use Google's Public DNS to avoid 'querySrv ECONNREFUSED' errors
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 dotenv.config();
 
